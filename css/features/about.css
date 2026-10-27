@@ -1,0 +1,218 @@
+/* ==========================================================================
+   FEATURE: WAYPOINT I - ORBIT OF CURIOSITY (ABOUT ME)
+   ========================================================================== */
+
+.about-section {
+  padding: 7rem 0;
+  position: relative;
+  background: linear-gradient(180deg, transparent 0%, rgba(244, 247, 253, 0.6) 50%, transparent 100%);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Narrative Story Card */
+.about-narrative {
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 3.5vw, 3rem);
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.about-narrative::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  right: 2rem;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--solar-gold), var(--nebula-rose), transparent);
+}
+
+.narrative-lead {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.narrative-lead span {
+  color: var(--lunar-violet);
+}
+
+.narrative-body {
+  color: var(--text-secondary);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.narrative-body strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Orbital Mission Pillars */
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.pillar-card {
+  padding: 1.4rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  background: #ffffff;
+  border-color: var(--solar-gold);
+  box-shadow: var(--shadow-card);
+}
+
+.pillar-icon-orbit {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 0.85rem;
+  position: relative;
+}
+
+.pillar-1 .pillar-icon-orbit {
+  background: var(--solar-gold-soft);
+  color: var(--solar-gold);
+  border: 1px solid rgba(229, 154, 42, 0.3);
+}
+
+.pillar-2 .pillar-icon-orbit {
+  background: var(--celestial-cyan-soft);
+  color: var(--celestial-cyan);
+  border: 1px solid rgba(29, 138, 191, 0.3);
+}
+
+.pillar-3 .pillar-icon-orbit {
+  background: var(--nebula-rose-soft);
+  color: var(--nebula-rose);
+  border: 1px solid rgba(214, 93, 134, 0.3);
+}
+
+.pillar-4 .pillar-icon-orbit {
+  background: var(--lunar-violet-soft);
+  color: var(--lunar-violet);
+  border: 1px solid rgba(107, 82, 196, 0.3);
+}
+
+.pillar-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.pillar-desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Side Planetary Orrery Card */
+.about-mission-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mission-dossier-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(246, 249, 255, 0.9) 100%);
+  border: 1.5px solid var(--border-starlight);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.dossier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-delicate);
+}
+
+.dossier-stamp {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--solar-gold);
+  background: var(--solar-gold-soft);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(229, 154, 42, 0.3);
+}
+
+.dossier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+}
+
+.dossier-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.92rem;
+}
+
+.dossier-item .label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.dossier-item .val {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.val.accent-gold {
+  color: var(--solar-gold);
+}
+
+.val.accent-violet {
+  color: var(--lunar-violet);
+}
+
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .about-pillars {
+    grid-template-columns: 1fr;
+  }
+}

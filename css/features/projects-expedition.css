@@ -1,0 +1,313 @@
+/* ==========================================================================
+   FEATURE: WAYPOINT III - DEEP SPACE EXPEDITIONS (PROJECTS & EXPERIENCE)
+   ========================================================================== */
+
+.projects-section {
+  padding: 7rem 0;
+  position: relative;
+  background: linear-gradient(180deg, transparent 0%, rgba(246, 249, 255, 0.7) 50%, transparent 100%);
+}
+
+.projects-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* Expedition Card */
+.expedition-card {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.5rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1.5px solid var(--border-delicate);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.expedition-card:hover {
+  border-color: var(--border-starlight);
+  box-shadow: var(--shadow-float);
+  transform: translateY(-4px);
+}
+
+.expedition-card.featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--solar-gold), var(--nebula-rose));
+}
+
+.expedition-card.reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.expedition-card.reverse .expedition-content {
+  order: 2;
+}
+
+.expedition-card.reverse .expedition-visual {
+  order: 1;
+}
+
+/* Card Content Header */
+.expedition-header {
+  margin-bottom: 1.25rem;
+}
+
+.expedition-timeline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--lunar-violet);
+  background: var(--lunar-violet-soft);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+
+.expedition-title {
+  font-family: var(--font-serif-celestial);
+  font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+}
+
+.expedition-subtitle {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--solar-gold);
+}
+
+.expedition-desc {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Feature bullets */
+.expedition-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  list-style: none;
+  margin-bottom: 1.75rem;
+}
+
+.expedition-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.bullet-star {
+  color: var(--solar-gold);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+/* Tech Pill Tags */
+.expedition-tech-stack {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.tech-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: #ffffff;
+  border: 1px solid var(--border-delicate);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  transition: var(--transition-smooth);
+}
+
+.tech-pill:hover {
+  border-color: var(--solar-gold);
+  color: var(--solar-gold);
+  transform: translateY(-1px);
+}
+
+/* Expedition Action Buttons */
+.expedition-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.btn-expedition {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: var(--transition-smooth);
+}
+
+.btn-expedition.primary {
+  background: linear-gradient(135deg, var(--solar-gold) 0%, #db8423 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(229, 154, 42, 0.28);
+}
+
+.btn-expedition.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 154, 42, 0.38);
+}
+
+.btn-expedition.outline {
+  background: #ffffff;
+  color: var(--text-primary);
+  border: 1px solid var(--border-starlight);
+}
+
+.btn-expedition.outline:hover {
+  border-color: var(--lunar-violet);
+  color: var(--lunar-violet);
+  transform: translateY(-2px);
+}
+
+/* Interactive Interactive Stage & Visual Boxes */
+.expedition-visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.simulation-box {
+  width: 100%;
+  background: linear-gradient(145deg, #ffffff 0%, #f6f8fd 100%);
+  border: 1.5px solid var(--border-delicate);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.simulation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.15rem;
+  border-bottom: 1px solid var(--border-delicate);
+}
+
+.simulation-title {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.simulation-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  background: var(--aurora-mint-soft);
+  color: var(--aurora-mint);
+}
+
+/* Architecture Ingestion Diagram Box (for AEZ NT Learner's) */
+.pipeline-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.flow-step {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: var(--transition-smooth);
+}
+
+.flow-step:hover {
+  border-color: var(--celestial-cyan);
+  transform: translateX(4px);
+}
+
+.flow-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--celestial-cyan-soft);
+  color: var(--celestial-cyan);
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.flow-meta {
+  flex-grow: 1;
+}
+
+.flow-name {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.flow-detail {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 992px) {
+  .expedition-card,
+  .expedition-card.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .expedition-card.reverse .expedition-content {
+    order: 1;
+  }
+
+  .expedition-card.reverse .expedition-visual {
+    order: 2;
+  }
+}

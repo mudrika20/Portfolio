@@ -1,0 +1,180 @@
+/* ==========================================================================
+   FEATURE: ODYSSEY FLIGHT RAIL & ALTITUDE TRACKER
+   ========================================================================== */
+
+.odyssey-rail {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-starlight);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-smooth);
+}
+
+.odyssey-telemetry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border-delicate);
+}
+
+.telemetry-label {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.telemetry-value {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--solar-gold);
+}
+
+/* Vertical Orbital Rail Line */
+.odyssey-waypoints {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.odyssey-waypoints::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, var(--solar-gold), var(--nebula-rose), var(--celestial-cyan), var(--lunar-violet));
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.waypoint-item {
+  position: relative;
+  z-index: 1;
+}
+
+.waypoint-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid var(--border-starlight);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.waypoint-btn:hover {
+  border-color: var(--solar-gold);
+  color: var(--solar-gold);
+  transform: scale(1.15);
+  box-shadow: var(--shadow-solar-glow);
+}
+
+.waypoint-item.active .waypoint-btn {
+  background: var(--solar-gold);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: scale(1.25);
+  box-shadow: 0 0 16px rgba(229, 154, 42, 0.6);
+}
+
+.waypoint-item.active .waypoint-btn::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border: 1px dashed var(--solar-gold);
+  border-radius: 50%;
+  animation: spinSlow 8s linear infinite;
+}
+
+/* Tooltip floating beside the rail */
+.waypoint-tooltip {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: #ffffff;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-delicate);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+}
+
+.waypoint-tooltip span {
+  color: var(--solar-gold);
+  font-weight: 700;
+  margin-right: 0.35rem;
+}
+
+.waypoint-btn:hover .waypoint-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Bottom Scroll Indicator Pill on Hero */
+.scroll-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding: 0.5rem 1.25rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border-starlight);
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-subtle);
+  animation: floatGentle 3s ease-in-out infinite;
+}
+
+.scroll-indicator svg {
+  color: var(--solar-gold);
+  animation: bounceDown 1.8s infinite;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@media (max-width: 1200px) {
+  .odyssey-rail {
+    display: none;
+  }
+}

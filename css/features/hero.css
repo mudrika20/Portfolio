@@ -1,0 +1,388 @@
+/* ==========================================================================
+   FEATURE: CELESTIAL HERO & SOLAR LAUNCHPAD
+   ========================================================================== */
+
+.hero-section {
+  min-height: 100vh;
+  padding-top: calc(var(--header-height) + 2rem);
+  padding-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dreamy Watercolor Celestial Backdrop */
+.hero-nebula-wash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/celestial_hero_nebula.jpg');
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.38;
+  mask-image: radial-gradient(circle at 50% 45%, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 45%, black 40%, transparent 80%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(229, 154, 42, 0.3);
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 12px rgba(229, 154, 42, 0.12);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.status-beacon {
+  width: 9px;
+  height: 9px;
+  background: var(--aurora-mint);
+  border-radius: 50%;
+  position: relative;
+}
+
+.status-beacon::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid var(--aurora-mint);
+  animation: pulseGlow 2s infinite ease-out;
+}
+
+.hero-title {
+  font-family: var(--font-serif-celestial);
+  font-size: clamp(2.5rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  margin-bottom: 0.85rem;
+}
+
+.hero-title .title-accent {
+  background: linear-gradient(135deg, var(--solar-gold) 0%, var(--nebula-rose) 60%, var(--lunar-violet) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-role {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.role-tag {
+  color: var(--lunar-violet);
+  background: var(--lunar-violet-soft);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hero-summary {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 580px;
+  margin-bottom: 2rem;
+}
+
+/* Call to actions */
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.75rem;
+}
+
+.btn-celestial-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.9rem 1.85rem;
+  background: linear-gradient(135deg, var(--solar-gold) 0%, #d87c22 100%);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 24px rgba(229, 154, 42, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.btn-celestial-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(229, 154, 42, 0.42);
+}
+
+.btn-celestial-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.9rem 1.65rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-starlight);
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-smooth);
+}
+
+.btn-celestial-secondary:hover {
+  background: #ffffff;
+  border-color: var(--lunar-violet);
+  color: var(--lunar-violet);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Hero Telemetries Bento */
+.hero-telemetries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 580px;
+}
+
+.telemetry-card {
+  padding: 1rem 1.15rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-smooth);
+}
+
+.telemetry-card:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--solar-gold);
+}
+
+.telemetry-num {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+
+.telemetry-num span {
+  font-size: 0.85rem;
+  color: var(--solar-gold);
+}
+
+.telemetry-card-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.35;
+  margin-top: 0.25rem;
+}
+
+/* Hero Visual / Celestial Orrery Frame */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.orrery-stage {
+  position: relative;
+  width: clamp(280px, 32vw, 420px);
+  height: clamp(280px, 32vw, 420px);
+  display: grid;
+  place-items: center;
+}
+
+/* Concentric Astrolabe Rings */
+.orrery-ring-outer {
+  position: absolute;
+  inset: -20px;
+  border: 1px dashed rgba(229, 154, 42, 0.4);
+  border-radius: 50%;
+  animation: spinSlow 40s linear infinite;
+}
+
+.orrery-ring-middle {
+  position: absolute;
+  inset: -6px;
+  border: 1.5px solid rgba(107, 82, 196, 0.25);
+  border-radius: 50%;
+  animation: spinSlow 28s linear infinite reverse;
+}
+
+.orrery-planet-1 {
+  position: absolute;
+  top: 15%;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffe6ad, var(--solar-gold));
+  box-shadow: var(--shadow-solar-glow);
+  display: grid;
+  place-items: center;
+  font-size: 0.65rem;
+}
+
+.orrery-planet-2 {
+  position: absolute;
+  bottom: 8%;
+  left: 2%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e2f4fd, var(--celestial-cyan));
+  box-shadow: 0 0 14px rgba(29, 138, 191, 0.45);
+}
+
+/* Photograph Container */
+.avatar-portal {
+  position: relative;
+  width: 86%;
+  height: 86%;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(229, 154, 42, 0.35) 45%, rgba(107, 82, 196, 0.35) 100%);
+  box-shadow: var(--shadow-float);
+  overflow: visible;
+  transition: var(--transition-smooth);
+}
+
+.avatar-portal:hover {
+  transform: scale(1.02);
+  box-shadow: 0 24px 60px -8px rgba(36, 52, 98, 0.2), 0 0 40px rgba(229, 154, 42, 0.3);
+}
+
+.avatar-img-wrap {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+  position: relative;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  transform: scale(1.02);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.avatar-portal:hover .avatar-img {
+  transform: scale(1.1);
+}
+
+/* Floating Solar Badge */
+.solar-badge-floating {
+  position: absolute;
+  bottom: 12px;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-starlight);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.solar-badge-floating span {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-role {
+    justify-content: center;
+  }
+
+  .hero-summary {
+    margin-inline: auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+}
+
+@media (max-width: 580px) {
+  .hero-telemetries {
+    grid-template-columns: 1fr;
+  }
+}

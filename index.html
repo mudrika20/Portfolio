@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Meta Tags -->
+  <title>Mudrika Sharma | Full Stack Developer & Data Science Explorer</title>
+  <meta name="description" content="Portfolio of Mudrika Sharma — Full Stack Developer & Computer Science pre-final year student specializing in Data Science, MERN stack, AI pipelines, and algorithmic problem-solving.">
+  <meta name="keywords" content="Mudrika Sharma, Full Stack Developer, MERN Stack, React, Node.js, Express, MongoDB, Data Science, Python, Kolkata, Portfolio">
+  <meta name="author" content="Mudrika Sharma">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪐</text></svg>">
+
+  <!-- Google Fonts: Celestial Cinzel, Modern Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Feature Modules -->
+  <link rel="stylesheet" href="css/core/variables.css">
+  <link rel="stylesheet" href="css/core/reset.css">
+  <link rel="stylesheet" href="css/features/navigation.css">
+  <link rel="stylesheet" href="css/features/odyssey-tracker.css">
+  <link rel="stylesheet" href="css/features/hero.css">
+  <link rel="stylesheet" href="css/features/about.css">
+  <link rel="stylesheet" href="css/features/skills-constellation.css">
+  <link rel="stylesheet" href="css/features/projects-expedition.css">
+  <link rel="stylesheet" href="css/features/mausam-simulator.css">
+  <link rel="stylesheet" href="css/features/tictactoe-easteregg.css">
+  <link rel="stylesheet" href="css/features/education-starmap.css">
+  <link rel="stylesheet" href="css/features/contact-transmission.css">
+</head>
+<body>
+
+  <!-- Live Celestial Stardust Canvas -->
+  <canvas id="celestial-canvas"></canvas>
+
+  <!-- Side Flight Rail & Altitude Telemetry Tracker -->
+  <aside class="odyssey-rail" aria-label="Odyssey Waypoint Rail">
+    <div class="odyssey-telemetry">
+      <span class="telemetry-label">Solar Range</span>
+      <span class="telemetry-value">0.00 AU</span>
+    </div>
+    <ul class="odyssey-waypoints">
+      <li class="waypoint-item active" data-target="hero">
+        <button class="waypoint-btn" aria-label="Home">
+          ☀️
+          <div class="waypoint-tooltip"><span>01</span> Home</div>
+        </button>
+      </li>
+      <li class="waypoint-item" data-target="about">
+        <button class="waypoint-btn" aria-label="About Me">
+          🌍
+          <div class="waypoint-tooltip"><span>02</span> About</div>
+        </button>
+      </li>
+      <li class="waypoint-item" data-target="skills">
+        <button class="waypoint-btn" aria-label="Skills">
+          ✨
+          <div class="waypoint-tooltip"><span>03</span> Skills</div>
+        </button>
+      </li>
+      <li class="waypoint-item" data-target="projects">
+        <button class="waypoint-btn" aria-label="Projects">
+          🚀
+          <div class="waypoint-tooltip"><span>04</span> Projects</div>
+        </button>
+      </li>
+      <li class="waypoint-item" data-target="education">
+        <button class="waypoint-btn" aria-label="Education">
+          🪐
+          <div class="waypoint-tooltip"><span>05</span> Education</div>
+        </button>
+      </li>
+      <li class="waypoint-item" data-target="contact">
+        <button class="waypoint-btn" aria-label="Contact">
+          📡
+          <div class="waypoint-tooltip"><span>06</span> Contact</div>
+        </button>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Celestial Navigation Bar -->
+  <nav class="celestial-nav" id="celestial-navbar">
+    <div class="celestial-container nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="Mudrika Sharma Home">
+        <div class="brand-astrolabe">
+          <div class="brand-ring"></div>
+          <div class="brand-core"></div>
+        </div>
+        <span>Mudrika Sharma</span>
+        <span class="brand-tag">MERN • DATA SCI</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" id="nav-links-menu">
+        <li><a href="#hero" class="nav-link active"><span class="nav-link-dot"></span>Home</a></li>
+        <li><a href="#about" class="nav-link"><span class="nav-link-dot"></span>About</a></li>
+        <li><a href="#skills" class="nav-link"><span class="nav-link-dot"></span>Skills</a></li>
+        <li><a href="#projects" class="nav-link"><span class="nav-link-dot"></span>Projects</a></li>
+        <li><a href="#education" class="nav-link"><span class="nav-link-dot"></span>Education</a></li>
+        <li><a href="#contact" class="nav-link"><span class="nav-link-dot"></span>Contact</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <button class="btn-sound" title="Toggle Sound Atmosphere" aria-label="Sound Ambiance">✦</button>
+        <a href="assets/Mudrika_Sharma_Resume.pdf" download="Mudrika_Sharma_Resume.pdf" class="btn-resume">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <span>Download Resume</span>
+        </a>
+        <button class="nav-mobile-toggle" aria-label="Toggle navigation menu" id="mobile-toggle-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       HERO: THE SOLAR LAUNCHPAD & EXOSPHERE HORIZON
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-nebula-wash"></div>
+    <div class="celestial-container hero-grid">
+      
+      <!-- Left Content -->
+      <div class="hero-content">
+        <div class="hero-status-pill">
+          <span class="status-beacon"></span>
+          <span>Open to Software Engineering Opportunities</span>
+        </div>
+
+        <h1 class="hero-title">
+          Engineering Scalable <br>
+          <span class="title-accent">Full-Stack Systems</span> & Data.
+        </h1>
+
+        <div class="hero-role">
+          <span>Mudrika Sharma</span>
+          <span style="color: var(--text-light);">|</span>
+          <span class="role-tag">Full Stack Developer</span>
+          <span class="role-tag" style="background: var(--solar-gold-soft); color: var(--solar-gold);">CS (Data Science) Pre-Final Year</span>
+        </div>
+
+        <p class="hero-summary">
+          Computer Science pre-final year student at Heritage Institute of Technology with a passion for architecting resilient <strong>MERN stack</strong> applications, designing <strong>AI document processing pipelines</strong>, and solving complex algorithmic challenges with precision.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn-celestial-primary">
+            <span>View Projects</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#contact" class="btn-celestial-secondary">
+            <span>Contact Me</span>
+          </a>
+        </div>
+
+        <!-- Hero Telemetries Bento -->
+        <div class="hero-telemetries">
+          <div class="telemetry-card">
+            <div class="telemetry-num">8.19 <span>/10</span></div>
+            <div class="telemetry-card-desc">BTech CS (Data Science) YGPA at Heritage Inst.</div>
+          </div>
+          <div class="telemetry-card">
+            <div class="telemetry-num">5<span>+</span></div>
+            <div class="telemetry-card-desc">HackerRank Certified Badges (React, Python, SQL)</div>
+          </div>
+          <div class="telemetry-card">
+            <div class="telemetry-num">MERN<span>+AI</span></div>
+            <div class="telemetry-card-desc">Full-Stack & Asynchronous Pipelines Experience</div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#about" class="scroll-indicator">
+          <span>Scroll to explore</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </a>
+      </div>
+
+      <!-- Right Visual: Celestial Orrery Frame with Mudrika's Photo -->
+      <div class="hero-visual">
+        <div class="orrery-stage">
+          <div class="orrery-ring-outer"></div>
+          <div class="orrery-ring-middle"></div>
+          
+          <div class="orrery-planet-1" title="Solar Node">✦</div>
+          <div class="orrery-planet-2" title="Terran Node"></div>
+
+          <!-- Profile Photo Portal -->
+          <div class="avatar-portal">
+            <div class="avatar-img-wrap">
+              <img src="assets/mudrika-photo.jpg" alt="Mudrika Sharma - Full Stack Developer" class="avatar-img">
+            </div>
+          </div>
+
+          <!-- Floating Badge -->
+          <div class="solar-badge-floating">
+            <span>✨</span>
+            <div>
+              <div style="font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase;">Based in</div>
+              <div>Kolkata, India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       WAYPOINT I: ORBIT OF CURIOSITY (ABOUT ME & MISSION TELEMETRY)
+       ======================================================================== -->
+  <section class="about-section" id="about">
+    <div class="celestial-container">
+      <div class="section-tag">About Me</div>
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">Bridging data-driven analytical rigor with intuitive, fluid web architecture.</p>
+
+      <div class="about-grid">
+        
+        <!-- Story Narrative -->
+        <div class="about-narrative">
+          <div class="narrative-lead">
+            A software developer crafting digital experiences with <span>problem-solving focus</span> and mathematical discipline.
+          </div>
+          <p class="narrative-body">
+            I am currently a Computer Science pre-final year student at <strong>Heritage Institute of Technology, Kolkata</strong>, specializing in <strong>Data Science</strong> (YGPA: 8.19). My journey spans from high school academic excellence (94% ICSE, 91% ISC) to real-world software engineering internships.
+          </p>
+          <p class="narrative-body">
+            Whether building full-stack CRUD applications using <strong>React, Node.js, Express, and MongoDB</strong>, designing asynchronous AI pipelines for academic document extraction, or solving algorithmic problems in <strong>Java, C++, and Python</strong>, I focus on clean architecture, optimal performance, and user-centric design.
+          </p>
+
+          <!-- 4 Core Pillars -->
+          <div class="about-pillars">
+            <div class="pillar-card pillar-1">
+              <div class="pillar-icon-orbit">💻</div>
+              <div class="pillar-title">Full-Stack Development</div>
+              <div class="pillar-desc">Responsive React frontends, robust Node/Express backends, and seamless RESTful APIs.</div>
+            </div>
+            <div class="pillar-card pillar-2">
+              <div class="pillar-icon-orbit">📊</div>
+              <div class="pillar-title">Data Science & DSA</div>
+              <div class="pillar-desc">Strong foundation in Data Structures, Algorithms, SQL databases, and Python data modeling.</div>
+            </div>
+            <div class="pillar-card pillar-3">
+              <div class="pillar-icon-orbit">⚡</div>
+              <div class="pillar-title">AI & Document Pipelines</div>
+              <div class="pillar-desc">Asynchronous document ingestion, metadata normalization, and automated validation.</div>
+            </div>
+            <div class="pillar-card pillar-4">
+              <div class="pillar-icon-orbit">🛠️</div>
+              <div class="pillar-title">Engineering Discipline</div>
+              <div class="pillar-desc">Automated QA, concurrent processing, Git version control, and CI/CD deployment workflows.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission Dossier Panel -->
+        <div class="about-mission-panel">
+          <div class="mission-dossier-card">
+            <div class="dossier-header">
+              <div>
+                <div style="font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;">Profile Overview</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">Quick Information</div>
+              </div>
+              <span class="dossier-stamp">OPEN TO WORK</span>
+            </div>
+
+            <ul class="dossier-list">
+              <li class="dossier-item">
+                <span class="label">Explorer Name</span>
+                <span class="val">Mudrika Sharma</span>
+              </li>
+              <li class="dossier-item">
+                <span class="label">Academic Mission</span>
+                <span class="val">B.Tech CSE (Data Science)</span>
+              </li>
+              <li class="dossier-item">
+                <span class="label">Institution</span>
+                <span class="val">Heritage Inst. of Tech, Kolkata</span>
+              </li>
+              <li class="dossier-item">
+                <span class="label">Cumulative Score</span>
+                <span class="val accent-gold">8.19 YGPA</span>
+              </li>
+              <li class="dossier-item">
+                <span class="label">Core Specialization</span>
+                <span class="val accent-violet">MERN + AI Pipelines</span>
+              </li>
+              <li class="dossier-item">
+                <span class="label">Flight Readiness</span>
+                <span class="val" style="color: var(--aurora-mint);">Internships & Software Roles</span>
+              </li>
+            </ul>
+
+            <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px dashed var(--border-delicate); display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Resume PDF Attached</span>
+              <a href="assets/Mudrika_Sharma_Resume.pdf" target="_blank" class="channel-action-btn">View PDF ↗</a>
+            </div>
+          </div>
+
+          <!-- Saturn Illustration Card -->
+          <div style="background: #ffffff; border: 1.5px solid var(--border-delicate); border-radius: var(--radius-lg); padding: 1.5rem; display: flex; align-items: center; gap: 1.25rem; box-shadow: var(--shadow-subtle);">
+            <img src="assets/planet_saturn.jpg" alt="Artistic Saturn Planetary Illustration" style="width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--border-starlight);">
+            <div>
+              <div style="font-family: var(--font-display); font-size: 0.92rem; font-weight: 700; color: var(--text-primary);">Lifelong Curiosity</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">"Actively improving problem-solving, exploring deep systems, and seeking opportunities to grow."</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       WAYPOINT II: PLANETARY ARRAY / SKILLS CONSTELLATION
+       ======================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="celestial-container">
+      <div class="section-tag">Technical Skills</div>
+      <h2 class="section-title">Skills & Technologies</h2>
+      <p class="section-subtitle">A curated stack of programming languages, frameworks, databases, and developer tools.</p>
+
+      <!-- Category Filter Pills -->
+      <div class="skills-filter-nav">
+        <button class="filter-tab active" data-filter="all">All Skills</button>
+        <button class="filter-tab" data-filter="frontend">Frontend</button>
+        <button class="filter-tab" data-filter="backend">Backend</button>
+        <button class="filter-tab" data-filter="data">Data & Algorithms</button>
+        <button class="filter-tab" data-filter="tools">Tools & CI/CD</button>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="skills-grid">
+
+        <!-- React.js -->
+        <div class="skill-card" data-cat="frontend">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #1d8abf;">⚛️<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">MERN CORE</span>
+          </div>
+          <div class="skill-name">React.js</div>
+          <div class="skill-desc">Component-driven architectures, custom hooks, reactive state management, and responsive UIs.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="92%"></div></div>
+        </div>
+
+        <!-- Node.js -->
+        <div class="skill-card" data-cat="backend">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #21a366;">🌿<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">RUNTIME</span>
+          </div>
+          <div class="skill-name">Node.js</div>
+          <div class="skill-desc">Asynchronous event loops, RESTful microservices, and backend performance tuning.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="88%"></div></div>
+        </div>
+
+        <!-- Express.js -->
+        <div class="skill-card" data-cat="backend">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #6b52c4;">🚂<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">REST APIS</span>
+          </div>
+          <div class="skill-name">Express.js</div>
+          <div class="skill-desc">Robust middleware pipelines, routing, JWT authentication, and business validation layers.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="87%"></div></div>
+        </div>
+
+        <!-- MongoDB -->
+        <div class="skill-card" data-cat="data">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #13aa52;">🍃<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">NOSQL</span>
+          </div>
+          <div class="skill-name">MongoDB</div>
+          <div class="skill-desc">Schema modeling with Mongoose, database indexing, query optimization, and document pipelines.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="84%"></div></div>
+        </div>
+
+        <!-- Python -->
+        <div class="skill-card" data-cat="data">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #3776ab;">🐍<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">AI / DATA SCI</span>
+          </div>
+          <div class="skill-name">Python</div>
+          <div class="skill-desc">Data processing, AI model integration, automated document ingestion, and algorithmic scripting.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="86%"></div></div>
+        </div>
+
+        <!-- SQL -->
+        <div class="skill-card" data-cat="data">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #e59a2a;">📊<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">RELATIONAL</span>
+          </div>
+          <div class="skill-name">SQL</div>
+          <div class="skill-desc">Relational schema design, complex joins, subqueries, aggregation, and HackerRank certified.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="85%"></div></div>
+        </div>
+
+        <!-- C & C++ -->
+        <div class="skill-card" data-cat="data">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #00599c;">⚡<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">ALGORITHMS</span>
+          </div>
+          <div class="skill-name">C / C++</div>
+          <div class="skill-desc">Data Structures & Algorithms, memory management, pointers, and high-performance computation.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="89%"></div></div>
+        </div>
+
+        <!-- Java -->
+        <div class="skill-card" data-cat="data">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #ea2d2e;">☕<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">OOP</span>
+          </div>
+          <div class="skill-name">Java</div>
+          <div class="skill-desc">Object-Oriented Programming, collections framework, inheritance hierarchies, and data modeling.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="82%"></div></div>
+        </div>
+
+        <!-- JavaScript (ES6+) -->
+        <div class="skill-card" data-cat="frontend">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #f7df1e;">🟡<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">CORE WEB</span>
+          </div>
+          <div class="skill-name">JavaScript (ES6+)</div>
+          <div class="skill-desc">Async/await, closures, promises, functional methods, event driven DOM manipulation, and modern syntax.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="90%"></div></div>
+        </div>
+
+        <!-- POSTMAN -->
+        <div class="skill-card" data-cat="tools">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #ff6c37;">📮<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">API TESTING</span>
+          </div>
+          <div class="skill-name">Postman</div>
+          <div class="skill-desc">Comprehensive endpoint testing, automated request scripts, collection runs, and mock servers.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="88%"></div></div>
+        </div>
+
+        <!-- GIT & GitHub -->
+        <div class="skill-card" data-cat="tools">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #f05032;">🐙<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">VERSION CTRL</span>
+          </div>
+          <div class="skill-name">GIT & GitHub</div>
+          <div class="skill-desc">Branching workflows, pull requests, merge conflict resolution, and collaborative git architecture.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="90%"></div></div>
+        </div>
+
+        <!-- CI-CD Pipeline -->
+        <div class="skill-card" data-cat="tools">
+          <div class="skill-top">
+            <div class="skill-orb" style="color: #2c90c7;">🚀<div class="skill-orb-ring"></div></div>
+            <span class="skill-level-badge">DEVOPS</span>
+          </div>
+          <div class="skill-name">CI-CD Pipelines</div>
+          <div class="skill-desc">Continuous integration workflows, automated build scripts, and GitHub Pages web deployments.</div>
+          <div class="skill-meter"><div class="skill-meter-fill" data-width="80%"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       WAYPOINT III: DEEP SPACE EXPEDITIONS (PROJECTS & EXPERIENCE)
+       ======================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="celestial-container">
+      <div class="section-tag">Featured Work</div>
+      <h2 class="section-title">Projects & Experience</h2>
+      <p class="section-subtitle">Real-world AI platforms, production architectures, and interactive full-stack applications.</p>
+
+      <div class="projects-stack">
+
+        <!-- EXPEDITION 1: AEZ NT LEARNER'S INTERNSHIP -->
+        <article class="expedition-card featured">
+          <div class="expedition-content">
+            <div class="expedition-header">
+              <span class="expedition-timeline-badge">📅 April 2026 – July 2026 • Remote</span>
+              <h3 class="expedition-title">AI-Powered Document Processing Platform</h3>
+              <div class="expedition-subtitle">AEZ NT LEARNER’S — Software Development Intern</div>
+            </div>
+
+            <p class="expedition-desc">
+              Engineered an intelligent academic document processing engine designed to automate the extraction of structured question papers, marking schemes, and syllabus metadata from complex, multi-page PDFs using custom AI pipelines.
+            </p>
+
+            <ul class="expedition-bullet-list">
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>Full Pipeline Engineering:</strong> Built frontend interfaces and asynchronous processing pipelines using <strong>React.js, Node.js, Express.js, MongoDB</strong>, and <strong>Python</strong>.</span>
+              </li>
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>AI Pairing & Extraction:</strong> Automated question-paper and marking-scheme pairing through AI models and asynchronous document ingestion.</span>
+              </li>
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>Normalization & Indexing:</strong> Implemented canonical question normalization, automated validation algorithms, and MongoDB database indexing to maximize extraction accuracy.</span>
+              </li>
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>Concurrency & QA:</strong> Optimized application throughput through concurrent processing, debugging, and QA automation, eliminating redundant computations.</span>
+              </li>
+            </ul>
+
+            <div class="expedition-tech-stack">
+              <span class="tech-pill">React.js</span>
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">Express.js</span>
+              <span class="tech-pill">MongoDB</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">AI Models</span>
+              <span class="tech-pill">Async Pipelines</span>
+            </div>
+
+            <div class="expedition-actions">
+              <a href="#contact" class="btn-expedition primary">
+                <span>Discuss Internship Experience</span>
+              </a>
+              <span class="tech-pill" style="color: var(--aurora-mint); font-weight: 700; background: var(--aurora-mint-soft); border-color: rgba(31, 163, 133, 0.3);">✓ Production Verified</span>
+            </div>
+          </div>
+
+          <!-- Architecture Visual Stage -->
+          <div class="expedition-visual">
+            <div class="simulation-box">
+              <div class="simulation-header">
+                <div class="simulation-title">
+                  <span>⚡ AI Pipeline Architecture</span>
+                </div>
+                <span class="simulation-badge">Active Engine</span>
+              </div>
+
+              <div class="pipeline-flow">
+                <div class="flow-step">
+                  <div class="flow-icon">📄</div>
+                  <div class="flow-meta">
+                    <div class="flow-name">1. PDF Ingestion & Inflow</div>
+                    <div class="flow-detail">Asynchronous streaming of academic PDF files</div>
+                  </div>
+                </div>
+
+                <div class="flow-step">
+                  <div class="flow-icon">🧠</div>
+                  <div class="flow-meta">
+                    <div class="flow-name">2. AI Model Extraction & Pairing</div>
+                    <div class="flow-detail">Question-paper & marking-scheme pairing via Python</div>
+                  </div>
+                </div>
+
+                <div class="flow-step">
+                  <div class="flow-icon">✨</div>
+                  <div class="flow-meta">
+                    <div class="flow-name">3. Canonical Normalization</div>
+                    <div class="flow-detail">Deduplication, formatting validation & QA filters</div>
+                  </div>
+                </div>
+
+                <div class="flow-step">
+                  <div class="flow-icon">🍃</div>
+                  <div class="flow-meta">
+                    <div class="flow-name">4. Indexed MongoDB Storage</div>
+                    <div class="flow-detail">Fast retrieval, indexed document search & REST API</div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 1rem; padding: 0.65rem 0.85rem; background: rgba(229, 154, 42, 0.08); border-radius: var(--radius-sm); font-size: 0.76rem; color: var(--text-secondary); text-align: center;">
+                ✦ Concurrent processing optimized for high throughput & zero redundancy
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- EXPEDITION 2: MAUSAM360 — WEATHER-AWARE ACTIVITY PLANNER -->
+        <article class="expedition-card reverse">
+          <div class="expedition-content">
+            <div class="expedition-header">
+              <span class="expedition-timeline-badge" style="background: var(--celestial-cyan-soft); color: var(--celestial-cyan);">📅 Oct 2026 • Full-Stack Project</span>
+              <h3 class="expedition-title">MAUSAM360 — Weather-Aware Activity Planner</h3>
+              <div class="expedition-subtitle">Weather Intelligence & Predictive Activity Planning Engine</div>
+            </div>
+
+            <p class="expedition-desc">
+              Developed a full-stack weather intelligence and activity planning web application using <strong>React.js, Node.js, Express.js</strong>, and a <strong>Relational Database</strong>. Merges live meteorological data, Doppler radar telemetry, and conversational AI assistance to dynamically generate tailored daily activities based on current atmospheric conditions.
+            </p>
+
+            <ul class="expedition-bullet-list">
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>Full-Stack Architecture:</strong> Engineered complete web client and robust microservice APIs with <strong>React.js, Node.js, Express.js</strong>, and relational database schema design.</span>
+              </li>
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>Real-Time Weather & Interactive Radar:</strong> Integrated live meteorological data streams, Doppler radar mapping, and <strong>GPS-based location detection</strong> for instant hyper-local updates.</span>
+              </li>
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>Contextual AI Weather Chatbot:</strong> Built an embedded conversational assistant delivering real-time weather advice, commute precautions, and personalized wardrobe suggestions.</span>
+              </li>
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>REST APIs, JWT & Saved Cities:</strong> Implemented RESTful endpoints, <strong>JWT authentication</strong>, dynamic favorite cities synchronization, and rule-based activity recommendation logic.</span>
+              </li>
+            </ul>
+
+            <div class="expedition-tech-stack">
+              <span class="tech-pill">React.js</span>
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">Express.js</span>
+              <span class="tech-pill">Relational DB (SQL)</span>
+              <span class="tech-pill">REST APIs</span>
+              <span class="tech-pill">JWT Authentication</span>
+              <span class="tech-pill">Interactive Radar</span>
+              <span class="tech-pill">GPS Telemetry</span>
+              <span class="tech-pill">AI Chatbot</span>
+            </div>
+
+            <div class="expedition-actions">
+              <a href="https://github.com/ArpanKumar07/Weather-2" target="_blank" rel="noopener noreferrer" class="btn-expedition primary" style="background: linear-gradient(135deg, var(--celestial-cyan) 0%, #166994 100%); box-shadow: 0 4px 14px rgba(29, 138, 191, 0.3);">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>Explore GitHub ↗</span>
+              </a>
+              <span style="font-size: 0.82rem; color: var(--celestial-cyan); font-weight: 700;">👉 Test live telemetry & AI bot in left card!</span>
+            </div>
+          </div>
+
+          <!-- Live Interactive MAUSAM360 Console Simulator -->
+          <div class="expedition-visual">
+            <div class="simulation-box" id="mausam-sim-container">
+              <div class="simulation-header">
+                <div class="simulation-title">
+                  <span>🌦️ MAUSAM360 Intelligence Console</span>
+                </div>
+                <span class="simulation-badge" style="background: var(--celestial-cyan-soft); color: var(--celestial-cyan);">REST API Active</span>
+              </div>
+
+              <div class="mausam-sim">
+                <!-- Tab Controls -->
+                <div class="mausam-tabs">
+                  <button class="mausam-tab-btn active" data-tab="planner">⚡ Activity Planner</button>
+                  <button class="mausam-tab-btn" data-tab="radar">📡 Radar Telemetry</button>
+                  <button class="mausam-tab-btn" data-tab="bot">🤖 Weather AI Bot</button>
+                </div>
+
+                <!-- Location Selector Bar -->
+                <div class="mausam-location-bar">
+                  <div class="city-pill-group">
+                    <button class="city-pill active" data-city="kolkata">📍 Kolkata</button>
+                    <button class="city-pill" data-city="london">🌧️ London</button>
+                    <button class="city-pill" data-city="tokyo">⛅ Tokyo</button>
+                    <button class="city-pill" data-city="reykjavik">❄️ Reykjavik</button>
+                  </div>
+                  <div class="location-actions">
+                    <button class="action-btn" id="btn-mausam-gps" title="Simulate GPS auto-detection"><span>🎯 GPS Detect</span></button>
+                    <button class="action-btn favorite-active" id="btn-mausam-fav" title="Toggle Favorite (JWT saved)"><span>❤️ Favorited</span></button>
+                  </div>
+                </div>
+
+                <!-- Weather Hero Banner -->
+                <div class="weather-hero-card">
+                  <div class="weather-temp-wrap">
+                    <div class="weather-icon-orb" id="mausam-icon">☀️</div>
+                    <div>
+                      <div class="weather-temp-main" id="mausam-temp">29°C</div>
+                      <div class="weather-condition-text" id="mausam-condition">Clear & Sunny</div>
+                    </div>
+                  </div>
+                  <div class="weather-metrics-grid">
+                    <div class="metric-item">
+                      <span class="metric-label">Humidity</span>
+                      <span class="metric-val" id="mausam-humidity">62%</span>
+                    </div>
+                    <div class="metric-item">
+                      <span class="metric-label">Wind</span>
+                      <span class="metric-val" id="mausam-wind">11 km/h</span>
+                    </div>
+                    <div class="metric-item">
+                      <span class="metric-label">UV Index</span>
+                      <span class="metric-val" id="mausam-uv">6 (Mod)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Panel 1: Activity Planner -->
+                <div class="mausam-panel mausam-content-panel" data-panel="planner">
+                  <div class="activity-rec-title">
+                    <span>Dynamic Activity Recommendations</span>
+                    <span style="font-size: 0.68rem; color: var(--text-muted); font-family: var(--font-mono);">Condition-Driven</span>
+                  </div>
+                  <div class="activity-list" id="mausam-activity-list">
+                    <!-- Injected by JavaScript -->
+                  </div>
+                </div>
+
+                <!-- Panel 2: Interactive Radar -->
+                <div class="mausam-panel radar-display-wrap" data-panel="radar" style="display: none;">
+                  <div class="radar-scope-box">
+                    <div class="radar-sweep-grid"></div>
+                    <div class="radar-sweep-beam"></div>
+                    <div class="radar-scope-header">
+                      <span class="radar-scope-title" id="mausam-radar-status">
+                        <span class="radar-status-dot"></span> Kolkata Doppler Radar
+                      </span>
+                      <span style="font-family: var(--font-mono); font-size: 0.68rem; color: #8da2d8;">LIVE SWEEP</span>
+                    </div>
+                    <div class="radar-metrics-row">
+                      <div class="radar-metric-box">
+                        <div class="radar-metric-num" id="mausam-radar-precip">0% Rain</div>
+                        <div class="radar-metric-lbl">Precipitation</div>
+                      </div>
+                      <div class="radar-metric-box">
+                        <div class="radar-metric-num" id="mausam-radar-aqi">42 AQI</div>
+                        <div class="radar-metric-lbl">Air Quality</div>
+                      </div>
+                      <div class="radar-metric-box">
+                        <div class="radar-metric-num" id="mausam-radar-pressure">1012 hPa</div>
+                        <div class="radar-metric-lbl">Pressure</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Panel 3: AI Chatbot -->
+                <div class="mausam-panel mausam-bot-container" data-panel="bot" style="display: none;">
+                  <div class="bot-chat-window" id="mausam-chat-window">
+                    <div class="chat-bubble bot">
+                      <strong>🤖 Mausam360 AI:</strong> Hello! I am your real-time meteorological assistant. Ask me anything about weather conditions, gear advice, or activity viability!
+                    </div>
+                  </div>
+                  <div class="chat-prompt-chips">
+                    <button class="prompt-chip" data-query="run">🏃 Safe to run?</button>
+                    <button class="prompt-chip" data-query="wear">🧥 What to wear?</button>
+                    <button class="prompt-chip" data-query="rain">☔ Any rain?</button>
+                  </div>
+                  <div class="bot-input-row">
+                    <input type="text" class="bot-input" id="mausam-bot-input" placeholder="Ask Mausam AI (e.g. Can I cycle outside?)...">
+                    <button class="bot-send-btn" id="mausam-bot-send">Ask</button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Toast notification -->
+              <div class="mausam-toast" id="mausam-toast"></div>
+
+              <div style="margin-top: 0.85rem; font-size: 0.72rem; color: var(--text-muted); text-align: center;">
+                ✦ Tests resume logic: Real-time telemetry, radar scanning, JWT favorites & weather-aware suggestions
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- EXPEDITION 3: GROCERY CART FULL-STACK PROJECT WITH LIVE SIMULATOR -->
+        <article class="expedition-card">
+          <div class="expedition-content">
+            <div class="expedition-header">
+              <span class="expedition-timeline-badge" style="background: var(--solar-gold-soft); color: var(--solar-gold);">📅 Nov 2025 – Dec 2025 • Personal Full-Stack Project</span>
+              <h3 class="expedition-title">Grocery Cart Reactive Application</h3>
+              <div class="expedition-subtitle">MERN Stack CRUD Application with Intelligent Business Rules</div>
+            </div>
+
+            <p class="expedition-desc">
+              A responsive, full-stack grocery management system featuring an interactive React frontend and Node.js + Express RESTful API backend for real-time CRUD operations, state updates, and dynamic statistics.
+            </p>
+
+            <ul class="expedition-bullet-list">
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>RESTful CRUD Operations:</strong> Complete endpoints supporting real-time add, update, delete, and fetch lifecycle.</span>
+              </li>
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>Smart Business Logic:</strong> Automatic item name capitalization, intelligent default values handling, and conditional item deletion when quantity drops to zero.</span>
+              </li>
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>Dynamic Cart Statistics:</strong> Live reactive computation of Total Items, Purchased, and Pending counters.</span>
+              </li>
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>UX & Filtering:</strong> Rule-based feedback messaging and multi-tier filtering (All, Purchased, Pending).</span>
+              </li>
+            </ul>
+
+            <div class="expedition-tech-stack">
+              <span class="tech-pill">React.js</span>
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">Express.js</span>
+              <span class="tech-pill">RESTful APIs</span>
+              <span class="tech-pill">State Management</span>
+            </div>
+
+            <div class="expedition-actions">
+              <span style="font-size: 0.82rem; color: var(--solar-gold); font-weight: 700;">👉 Try the live interactive simulation in the right card!</span>
+            </div>
+          </div>
+
+          <!-- Live Interactive Grocery Cart Simulator -->
+          <div class="expedition-visual">
+            <div class="simulation-box" id="grocery-sim-container">
+              <div class="simulation-header">
+                <div class="simulation-title">
+                  <span>🛒 Live Cart Engine Simulator</span>
+                </div>
+                <div class="sim-filter-tabs">
+                  <button class="sim-filter-btn active" data-sim-filter="all">All</button>
+                  <button class="sim-filter-btn" data-sim-filter="pending">Pending</button>
+                  <button class="sim-filter-btn" data-sim-filter="purchased">Purchased</button>
+                </div>
+              </div>
+
+              <div class="grocery-sim">
+                <!-- Add Input -->
+                <div class="sim-input-row">
+                  <input type="text" class="sim-input" placeholder="Enter item (e.g., celestial tea, starlight honey)...">
+                  <button class="sim-btn-add">+ Add</button>
+                </div>
+
+                <!-- Stats Bar -->
+                <div class="sim-stats-bar">
+                  <span class="stat-total">Total Items: 4</span>
+                  <span class="stat-purchased">Purchased: 1</span>
+                  <span class="stat-pending">Pending: 2</span>
+                </div>
+
+                <!-- Items List -->
+                <div class="sim-items-list">
+                  <!-- Injected via JavaScript -->
+                </div>
+              </div>
+
+              <div style="margin-top: 0.85rem; font-size: 0.72rem; color: var(--text-muted); text-align: center;">
+                ✦ Tests resume logic: auto capitalization, default count, & zero-deletion
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- EXPEDITION 4: TIC-TAC-TOE REACT GAME WITH PLAYABLE EASTER EGG -->
+        <article class="expedition-card reverse">
+          <div class="expedition-content">
+            <div class="expedition-header">
+              <span class="expedition-timeline-badge" style="background: var(--celestial-cyan-soft); color: var(--celestial-cyan);">📅 Nov 2025 – Dec 2025 • Personal Project</span>
+              <h3 class="expedition-title">Cosmic Tic-Tac-Toe React Engine</h3>
+              <div class="expedition-subtitle">Component-Based State Management & Algorithmic Win Detection</div>
+            </div>
+
+            <p class="expedition-desc">
+              An interactive game built using React to master state management, win detection algorithms, and clean component-based UI design. Deployed via GitHub Pages to gain hands-on build and deployment workflows.
+            </p>
+
+            <ul class="expedition-bullet-list">
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>Game State Architecture:</strong> Immutable board array updates with responsive turn toggle logic.</span>
+              </li>
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>Win Detection Algorithms:</strong> Evaluates all 8 winning matrix trajectories in constant time.</span>
+              </li>
+              <li class="expedition-bullet">
+                <span class="bullet-star">✦</span>
+                <span><strong>CI/CD & Deployment:</strong> Deployed on GitHub Pages with automated build scripts.</span>
+              </li>
+            </ul>
+
+            <div class="expedition-tech-stack">
+              <span class="tech-pill">React.js</span>
+              <span class="tech-pill">Component Architecture</span>
+              <span class="tech-pill">GitHub Pages</span>
+              <span class="tech-pill">Algorithms</span>
+            </div>
+
+            <div class="expedition-actions">
+              <a href="https://github.com/mudrika20" target="_blank" rel="noopener noreferrer" class="btn-expedition outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>Explore GitHub Repository ↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Playable Cosmic Tic-Tac-Toe Game Box -->
+          <div class="expedition-visual">
+            <div class="simulation-box" id="cosmic-ttt-container" style="display: flex; flex-direction: column; align-items: center;">
+              <div class="simulation-header" style="width: 100%;">
+                <div class="simulation-title">
+                  <span>☀️ vs 🌙 Playable Cosmic Game</span>
+                </div>
+                <button class="ttt-reset-btn" title="Restart Game">⟳ Reset</button>
+              </div>
+
+              <div class="tictactoe-box">
+                <div class="ttt-status-pill">
+                  <span>Turn:</span> Solar Sun ☀️
+                </div>
+
+                <div class="ttt-board">
+                  <!-- 9 cells injected via tictactoe-game.js -->
+                </div>
+              </div>
+
+              <div style="margin-top: 0.85rem; font-size: 0.72rem; color: var(--text-muted); text-align: center;">
+                ✦ Solar (☀️) vs Lunar (🌙) — Win detection algorithms running in real-time
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       WAYPOINT IV: STELLAR MILESTONES & ACADEMY (EDUCATION & CERTS)
+       ======================================================================== -->
+  <section class="education-section" id="education">
+    <div class="celestial-container">
+      <div class="section-tag">Education & Certifications</div>
+      <h2 class="section-title">Education & Certifications</h2>
+      <p class="section-subtitle">Academic background, distinctions, and verified engineering credentials.</p>
+
+      <div class="milestones-layout">
+        
+        <!-- Left: Education Timeline -->
+        <div class="timeline-track">
+
+          <!-- College -->
+          <div class="timeline-node">
+            <div class="timeline-marker">🎓</div>
+            <div class="timeline-card">
+              <span class="timeline-period">2024 – 2028</span>
+              <h3 class="timeline-title">BTech. Computer Science (Data Science)</h3>
+              <div class="timeline-inst">Heritage Institute Of Technology, Kolkata</div>
+              <div class="timeline-score">
+                <span>🌟 Cumulative Score:</span>
+                <strong>YGPA 8.19 / 10</strong>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.65rem;">
+                Focusing on Data Structures & Algorithms, Machine Learning fundamentals, Database Management Systems, and Full-Stack Web Architecture.
+              </p>
+            </div>
+          </div>
+
+          <!-- Higher Secondary -->
+          <div class="timeline-node">
+            <div class="timeline-marker">📚</div>
+            <div class="timeline-card">
+              <span class="timeline-period">2023 – 2024</span>
+              <h3 class="timeline-title">Higher Secondary (ISC - Class XII)</h3>
+              <div class="timeline-inst">Agrasain Balika Siksha Sadan, Howrah</div>
+              <div class="timeline-score" style="background: var(--solar-gold-soft); color: var(--solar-gold);">
+                <span>🏆 Academic Honor:</span>
+                <strong>91% Distinction</strong>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.65rem;">
+                Completed Senior Secondary education with rigorous focus in Mathematics, Computer Science, and Physics.
+              </p>
+            </div>
+          </div>
+
+          <!-- Senior Secondary -->
+          <div class="timeline-node">
+            <div class="timeline-marker">🪐</div>
+            <div class="timeline-card">
+              <span class="timeline-period">2021 – 2022</span>
+              <h3 class="timeline-title">Senior Secondary (ICSE - Class X)</h3>
+              <div class="timeline-inst">Agrasain Balika Siksha Sadan, Howrah</div>
+              <div class="timeline-score" style="background: var(--nebula-rose-soft); color: var(--nebula-rose);">
+                <span>⭐ Outstanding Honor:</span>
+                <strong>94% Distinction</strong>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.65rem;">
+                Foundational excellence in analytical sciences, mathematics, and introductory computer programming.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: HackerRank Certifications Constellation -->
+        <div class="certs-panel">
+          <div class="certs-header-box">
+            <div class="certs-header-badge">🏅</div>
+            <h3 class="certs-header-title">HackerRank Certifications</h3>
+            <p class="certs-header-meta">Granted 2026 • Verified Problem Solving & Programming Competencies</p>
+          </div>
+
+          <div class="certs-grid">
+            
+            <div class="cert-item">
+              <div class="cert-info">
+                <span class="cert-seal">⚛️</span>
+                <div>
+                  <div class="cert-name">Frontend Developer (ReactJs)</div>
+                  <div class="cert-issuer">HackerRank Verified • 2026</div>
+                </div>
+              </div>
+              <span class="cert-status">VERIFIED</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-info">
+                <span class="cert-seal">🧩</span>
+                <div>
+                  <div class="cert-name">Problem Solving (Basic)</div>
+                  <div class="cert-issuer">Data Structures & Algorithms • 2026</div>
+                </div>
+              </div>
+              <span class="cert-status">VERIFIED</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-info">
+                <span class="cert-seal">⚛️</span>
+                <div>
+                  <div class="cert-name">ReactJs (Basic)</div>
+                  <div class="cert-issuer">Components & Hooks • 2026</div>
+                </div>
+              </div>
+              <span class="cert-status">VERIFIED</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-info">
+                <span class="cert-seal">🐍</span>
+                <div>
+                  <div class="cert-name">Python (Basic)</div>
+                  <div class="cert-issuer">Core Language & Scripting • 2026</div>
+                </div>
+              </div>
+              <span class="cert-status">VERIFIED</span>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-info">
+                <span class="cert-seal">📊</span>
+                <div>
+                  <div class="cert-name">SQL (Basic)</div>
+                  <div class="cert-issuer">Queries, Joins & Aggregations • 2026</div>
+                </div>
+              </div>
+              <span class="cert-status">VERIFIED</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================
+       WAYPOINT V: TRANSMISSION STATION & CELESTIAL CONTACT
+       ======================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="celestial-container">
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Contact Me</h2>
+      <p class="section-subtitle">Have a project, internship opportunity, or question? Feel free to reach out directly.</p>
+
+      <div class="contact-grid">
+        
+        <!-- Channels Info -->
+        <div class="transmission-channels">
+          <div class="station-status-box">
+            <div class="status-row">
+              <span class="status-beacon"></span>
+              <span>Available for Software Development Roles • Kolkata, India</span>
+            </div>
+            <h3 class="station-title">Contact Information</h3>
+            <p class="station-desc">
+              I am actively seeking software development internships, full-stack roles, and open-source collaborations. Feel free to connect directly via email, phone, or LinkedIn!
+            </p>
+          </div>
+
+          <div class="channels-list">
+
+            <!-- Email -->
+            <div class="channel-card">
+              <div class="channel-main">
+                <div class="channel-icon email">✉️</div>
+                <div>
+                  <div class="channel-label">Email Address</div>
+                  <div class="channel-value">mudrikasharma2009@gmail.com</div>
+                </div>
+              </div>
+              <button class="channel-action-btn copy-trigger" data-copy="mudrikasharma2009@gmail.com" title="Copy Email">
+                Copy
+              </button>
+            </div>
+
+            <!-- Phone -->
+            <div class="channel-card">
+              <div class="channel-main">
+                <div class="channel-icon phone">📞</div>
+                <div>
+                  <div class="channel-label">Phone & WhatsApp</div>
+                  <div class="channel-value">+91 7021778257</div>
+                </div>
+              </div>
+              <button class="channel-action-btn copy-trigger" data-copy="+917021778257" title="Copy Phone Number">
+                Copy
+              </button>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="channel-card">
+              <div class="channel-main">
+                <div class="channel-icon linkedin">💼</div>
+                <div>
+                  <div class="channel-label">LinkedIn Profile</div>
+                  <div class="channel-value">linkedin.com/in/mudrikasharma</div>
+                </div>
+              </div>
+              <a href="https://linkedin.com/in/mudrikasharma" target="_blank" rel="noopener noreferrer" class="channel-action-btn">
+                Connect ↗
+              </a>
+            </div>
+
+            <!-- GitHub -->
+            <div class="channel-card">
+              <div class="channel-main">
+                <div class="channel-icon github">🐙</div>
+                <div>
+                  <div class="channel-label">GitHub Profile</div>
+                  <div class="channel-value">github.com/mudrika20</div>
+                </div>
+              </div>
+              <a href="https://github.com/mudrika20" target="_blank" rel="noopener noreferrer" class="channel-action-btn">
+                Follow ↗
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Transmission Form -->
+        <div class="transmission-form-card">
+          <h3 style="font-family: var(--font-serif-celestial); font-size: 1.35rem; font-weight: 700; margin-bottom: 0.35rem;">
+            Send a Message
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Your message will be sent directly to Mudrika Sharma's inbox.
+          </p>
+
+          <div class="form-inbox-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h9"></path><polyline points="22,6 12,13 2,6"></polyline><circle cx="18" cy="19" r="3"></circle><path d="m21 22-1.5-1.5"></path></svg>
+            <span>Destination: mudrikasharma2009@gmail.com</span>
+          </div>
+
+          <form id="transmission-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key & Spam Protection -->
+            <input type="hidden" name="access_key" id="web3forms-key" value="55f3ceec-3d2b-4fc8-8274-477279f248fa">
+            <input type="hidden" name="from_name" value="Portfolio Visitor">
+            <input type="hidden" name="to_email" value="mudrikasharma2009@gmail.com">
+            <input type="checkbox" name="botcheck" style="display: none;">
+
+            <div class="form-group-grid">
+              <div class="form-field">
+                <label for="contact-name">Your Name <span>*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Morgan" required autocomplete="name">
+              </div>
+
+              <div class="form-field">
+                <label for="contact-email">Email Address <span>*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. alex@example.com" required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Full Stack Internship Opportunity">
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Message <span>*</span></label>
+              <textarea id="contact-message" name="message" class="form-textarea" placeholder="Hi Mudrika, I came across your portfolio and would love to discuss..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-transmit" id="btn-submit-message">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+
+            <!-- Quick Direct Fallback & Copy Links -->
+            <div class="form-alt-actions">
+              <span>Or reach out directly:</span>
+              <div class="alt-action-links">
+                <a href="mailto:mudrikasharma2009@gmail.com" class="btn-alt-link" title="Open in your default mail app">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  <span>Open Email App</span>
+                </a>
+                <button type="button" class="btn-alt-link copy-trigger" data-copy="mudrikasharma2009@gmail.com" title="Copy email address">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy Email</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-feedback" id="form-feedback"></div>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Station -->
+      <footer class="celestial-footer">
+        <div>
+          <strong>✦ Mudrika Sharma</strong> — Portfolio
+          <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">
+            BTech Computer Science (Data Science) • Kolkata, India
+          </div>
+        </div>
+
+        <div>
+          Kolkata, India
+        </div>
+
+        <a href="#hero" class="footer-zenith-btn">
+          <span>Back to Top</span>
+          <span>↑</span>
+        </a>
+      </footer>
+
+    </div>
+  </section>
+
+  <!-- Feature Scripts -->
+  <script src="js/core/celestial-canvas.js"></script>
+  <script src="js/features/odyssey-nav.js"></script>
+  <script src="js/features/skills-filter.js"></script>
+  <script src="js/features/mausam-simulator.js"></script>
+  <script src="js/features/projects-modal.js"></script>
+  <script src="js/features/tictactoe-game.js"></script>
+  <script src="js/features/contact-form.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

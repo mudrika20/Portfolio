@@ -1,0 +1,68 @@
+/* ==========================================================================
+   CELESTIAL ODYSSEY - CORE DESIGN SYSTEM & VARIABLES
+   Theme: Light & Artistic Space / Solar System
+   ========================================================================== */
+
+:root {
+  /* Celestial Daylight & Starlight Backgrounds */
+  --bg-primary: #fbfcff;
+  --bg-secondary: #f4f7fd;
+  --bg-tertiary: #edf2fa;
+  --bg-card: rgba(255, 255, 255, 0.78);
+  --bg-card-hover: rgba(255, 255, 255, 0.94);
+  --bg-glass: rgba(255, 255, 255, 0.65);
+
+  /* Deep Space Typography & Starlight Inks */
+  --text-primary: #171d3b;       /* Deep celestial midnight navy */
+  --text-secondary: #424e75;     /* Twilight slate */
+  --text-muted: #6e7da2;         /* Nebula mist */
+  --text-light: #8e9bbd;         /* Faint stardust text */
+
+  /* Planetary & Celestial Accents */
+  --solar-gold: #e59a2a;         /* Sun & Gold Orbits */
+  --solar-gold-soft: #fdf3df;    /* Gentle daylight gold fill */
+  --solar-gold-glow: rgba(229, 154, 42, 0.35);
+  
+  --nebula-rose: #d65d86;        /* Cosmic dusk rose */
+  --nebula-rose-soft: #fdeaf2;
+  
+  --celestial-cyan: #1d8abf;      /* Earth & Ice giants */
+  --celestial-cyan-soft: #e2f4fd;
+  
+  --lunar-violet: #6b52c4;       /* Deep space aurora violet */
+  --lunar-violet-soft: #ede8fc;
+  
+  --aurora-mint: #1fa385;        /* Atmosphere & Success */
+  --aurora-mint-soft: #e4f7f2;
+
+  /* Astronomical Borders & Astrolabe Rings */
+  --border-delicate: rgba(162, 179, 218, 0.28);
+  --border-starlight: rgba(142, 165, 212, 0.45);
+  --border-gold: rgba(229, 154, 42, 0.42);
+  --border-glass: rgba(255, 255, 255, 0.85);
+
+  /* Elevation & Celestial Halos */
+  --shadow-subtle: 0 4px 20px -2px rgba(36, 52, 98, 0.06);
+  --shadow-card: 0 10px 34px -4px rgba(36, 52, 98, 0.08), 0 2px 8px rgba(36, 52, 98, 0.03);
+  --shadow-float: 0 20px 48px -8px rgba(36, 52, 98, 0.12), 0 4px 16px rgba(36, 52, 98, 0.05);
+  --shadow-solar-glow: 0 0 35px rgba(229, 154, 42, 0.22);
+  --shadow-aurora-glow: 0 0 35px rgba(107, 82, 196, 0.20);
+
+  /* Typography Stacks */
+  --font-serif-celestial: 'Cinzel', serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Layout Spacing & Constellations */
+  --container-max: 1240px;
+  --header-height: 80px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}

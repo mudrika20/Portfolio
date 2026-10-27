@@ -1,0 +1,191 @@
+/* ==========================================================================
+   FEATURE: WAYPOINT II - PLANETARY ARRAY / SKILLS CONSTELLATION
+   ========================================================================== */
+
+.skills-section {
+  padding: 7rem 0;
+  position: relative;
+}
+
+/* Category Filter Tabs */
+.skills-filter-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.75rem;
+  justify-content: flex-start;
+}
+
+.filter-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+}
+
+.filter-tab:hover {
+  background: #ffffff;
+  color: var(--text-primary);
+  border-color: var(--border-starlight);
+  transform: translateY(-2px);
+}
+
+.filter-tab.active {
+  background: linear-gradient(135deg, var(--solar-gold) 0%, #e08b26 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(229, 154, 42, 0.35);
+}
+
+/* Skills Cards Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid var(--border-delicate);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-card:hover {
+  background: #ffffff;
+  border-color: var(--solar-gold);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card);
+}
+
+.skill-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle at top right, var(--solar-gold-glow), transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.skill-card:hover::after {
+  opacity: 1;
+}
+
+.skill-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.15rem;
+}
+
+.skill-orb {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  font-size: 1.35rem;
+  background: #ffffff;
+  border: 1.5px solid var(--border-delicate);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.skill-orb-ring {
+  position: absolute;
+  inset: -4px;
+  border: 1px dashed var(--solar-gold);
+  border-radius: 50%;
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.skill-card:hover .skill-orb-ring {
+  opacity: 0.8;
+  animation: spinSlow 12s linear infinite;
+}
+
+.skill-level-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+}
+
+.skill-card:hover .skill-level-badge {
+  background: var(--solar-gold-soft);
+  color: var(--solar-gold);
+}
+
+.skill-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.skill-desc {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.15rem;
+  flex-grow: 1;
+}
+
+.skill-meter {
+  height: 6px;
+  width: 100%;
+  background: rgba(142, 165, 212, 0.2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-meter-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--solar-gold), var(--nebula-rose));
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Category highlights */
+.skill-card[data-cat="frontend"] .skill-meter-fill {
+  background: linear-gradient(90deg, #1d8abf, #41b4e6);
+}
+
+.skill-card[data-cat="backend"] .skill-meter-fill {
+  background: linear-gradient(90deg, #6b52c4, #9275eb);
+}
+
+.skill-card[data-cat="data"] .skill-meter-fill {
+  background: linear-gradient(90deg, #d65d86, #f37da6);
+}
+
+.skill-card[data-cat="tools"] .skill-meter-fill {
+  background: linear-gradient(90deg, #e59a2a, #f7b44d);
+}
